@@ -61,7 +61,6 @@ TEMPLATES = [
 
 # --------- BANCO (SQL Server) ---------
 DATABASES = {
-    DATABASES = {
     'default': {
         'ENGINE': 'mssql',
         'NAME': 'importacao',
@@ -73,7 +72,7 @@ DATABASES = {
             'driver': 'ODBC Driver 18 for SQL Server',
             'trusted_connection': 'yes',  # importante para Windows Authentication config do meu BD (fabricio)
         },
-    }}
+    }
 }
 
 
