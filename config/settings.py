@@ -61,19 +61,22 @@ TEMPLATES = [
 
 # --------- BANCO (SQL Server) ---------
 DATABASES = {
+    DATABASES = {
     'default': {
         'ENGINE': 'mssql',
-        'NAME': os.getenv('DB_NAME', 'jotanunes'),
-        'USER': os.getenv('DB_USER', 'sa'),
-        'PASSWORD': os.getenv('DB_PASSWORD', 'SenhaMuitoForte'),
-        'HOST': os.getenv('DB_HOST', 'localhost'),
-        'PORT': os.getenv('DB_PORT', '1433'),
+        'NAME': 'importacao',
+        'USER': '',  # deixa vazio
+        'PASSWORD': '',  # deixa vazio
+        'HOST': 'localhost',
+        'PORT': '1433',
         'OPTIONS': {
-            'driver': os.getenv('ODBC_DRIVER', 'ODBC Driver 18 for SQL Server'),
-            'TrustServerCertificate': 'yes',
+            'driver': 'ODBC Driver 18 for SQL Server',
+            'trusted_connection': 'yes',  # importante para Windows Authentication config do meu BD (fabricio)
         },
-    }
+    }}
 }
+
+
 
 LANGUAGE_CODE = 'pt-br'
 TIME_ZONE = 'America/Maceio'
