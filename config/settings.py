@@ -11,6 +11,8 @@ ALLOWED_HOSTS = ['*']  # em produção, troque por domínio(s)
 
 INSTALLED_APPS = [
     # Django core
+    #  backend do SQL Server
+    'sql_server.pyodbc',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -62,7 +64,7 @@ TEMPLATES = [
 # --------- BANCO (SQL Server) ---------
 DATABASES = {
     'default': {
-        'ENGINE': 'mssql',
+        'ENGINE': 'sql_server.pyodbc',
         'NAME': 'importacao',
         'USER': '',  # deixa vazio
         'PASSWORD': '',  # deixa vazio
